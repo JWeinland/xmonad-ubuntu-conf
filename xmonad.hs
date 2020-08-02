@@ -197,9 +197,9 @@ myKeyBindings =
     , ((myModMask, xK_p), spawn "synapse")
     , ((myModMask .|. mod1Mask, xK_space), spawn "synapse")
     , ((myModMask, xK_u), focusUrgent)
-    , ((0, 0x1008FF12), spawn "amixer -q set Master toggle")
-    , ((0, 0x1008FF11), spawn "amixer -q set Master 10%-")
-    , ((0, 0x1008FF13), spawn "amixer -q set Master 10%+")
+    , ((0, 0x1008ff12), spawn "amixer -D pulse sset Master 0%")
+    , ((0, 0x1008ff11), spawn "amixer -D pulse sset Master 5%-")
+    , ((0, 0x1008ff13), spawn "amixer -D pulse sset Master 5%+")
   ]
 
 
