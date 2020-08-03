@@ -83,7 +83,7 @@ myUrgentWSRight = "}"
 
 myWorkspaces =
   [
-    "7:Chat",  "8:Dbg", "9:Pix",
+    "7:Music",  "8:Dbg", "9:Pix",
     "4:Docs",  "5:Dev", "6:Web",
     "1:Term",  "2:Hub", "3:Mail",
     "0:VM",    "Extr1", "Extr2"
@@ -197,6 +197,7 @@ myKeyBindings =
     , ((myModMask, xK_p), spawn "synapse")
     , ((myModMask .|. mod1Mask, xK_space), spawn "synapse")
     , ((myModMask, xK_u), focusUrgent)
+    , ((myModMask, xK_m), spawn "i3lock --color=000000")
     , ((0, 0x1008ff12), spawn "amixer -D pulse sset Master 0%")
     , ((0, 0x1008ff11), spawn "amixer -D pulse sset Master 5%-")
     , ((0, 0x1008ff13), spawn "amixer -D pulse sset Master 5%+")
@@ -252,7 +253,7 @@ myManagementHooks = [
   , resource =? "stalonetray" --> doIgnore
   , className =? "rdesktop" --> doFloat
   , className =? "Gnome-calculator" --> doFloat
-  , (className =? "Slack") --> doF (W.shift "7:Chat")
+  , (className =? "spotify") --> doF (W.shift "7:Music")
   , (className =? "Gimp-2.8") --> doF (W.shift "9:Pix")
   ]
 
